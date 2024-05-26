@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Update gist
-        run: python chess_com_box.py
+        run: python gist.py
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: 
