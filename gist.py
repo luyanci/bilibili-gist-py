@@ -1,5 +1,6 @@
 import os
 import sys
+from dotenv import load_dotenv
 from bilibili_api import Credential,user,sync 
 from github.InputFileContent import InputFileContent
 from github import Github
@@ -12,9 +13,15 @@ REQUIRED_ENVS = [
     ENV_VAR_GITHUB_TOKEN,
     ENV_VAR_BILI_SESSDATA
 ]
+async def get_bili_video_list():
+    u= user.User(i["mid"],credential=cedential)
+    global vist
+    vist = await u.get_videos(ps=3)
+    return 
 
 async def get_bili_user_info():
     sessdata= os.environ[ENV_VAR_BILI_SESSDATA]
+    global cedential
     cedential = Credential(sessdata=sessdata)
     info= await user.get_self_info(credential=cedential)
     return info
@@ -28,29 +35,38 @@ def update_gist(title: str, content: str) -> bool:
     gist.edit(title, {old_title: InputFileContent(content, title)})
     print(f"{title}\n{content}")
 
-def getneeded(infos: dict,need: str):
-    print(infos[need])
-    return infos[need] 
+def getneededinfo(need: str):
+    print(i[need])
+    return i[need] 
 
+def getvideoinfo(num: int,need: str):
+    return vist["list"]["vlist"][num][need]
 
-def main(inf: dict):
-    username= getneeded(inf,"name")
-    follower= getneeded(inf,"follower")
-    following = getneeded(inf,"following")
+def main():
+    import json
+    username= getneededinfo("name")
+    follower= getneededinfo("follower")
+    following = getneededinfo("following")
+    title1 = getvideoinfo(0,"title")
+    title2 = getvideoinfo(1,"title")
+    title3 = getvideoinfo(2,"title")
     print("info:用户名：",username,"粉丝数：",follower,"关注数：",following)
-
+    print(title1,"\n",title2,"\n",title3)
 
 
 
 if __name__== "__main__":
+    load_dotenv(dotenv_path="./.env")
     import time
-    i = sync(get_bili_user_info())
     s = time.perf_counter()
+    global i
+    i = sync(get_bili_user_info())
+    sync(get_bili_video_list())
     # test with python gist.py test <gist> <github-token> <bili_sessdata>
     if len(sys.argv) > 1:
         os.environ[ENV_VAR_GIST_ID] = sys.argv[2]
         os.environ[ENV_VAR_GITHUB_TOKEN] = sys.argv[3]
         os.environ[ENV_VAR_BILI_SESSDATA] = sys.argv[4]
-    main(i)
+    main()
     elapsed = time.perf_counter() - s
     print(f"{__file__} executed in {elapsed:0.2f} seconds.")
