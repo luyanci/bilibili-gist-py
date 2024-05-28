@@ -19,5 +19,5 @@ jobs:
         run: python gist.py
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GIST_ID: 
+          GIST_ID: 181a99b82ae47d3a6fccbd126f9d93ef
           BILI_SESSDATA: ${{ secrets.BILI_SESSDATA }}
