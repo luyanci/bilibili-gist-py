@@ -48,9 +48,11 @@ def getvideoinfo(num: int,need: str):
 
 def getvideodate(num: int):
     import datetime
+    from pytz import timezone
+    tzc = timezone('Asia/Shanghai')
     date= getvideoinfo(num,"created")
-    date_time = datetime.datetime.fromtimestamp(date)
-    formated_date = date_time.strftime("%Y年%m月%d日 %H:%M:%S")
+    date_time = datetime.datetime.fromtimestamp(date,tz=tzc)
+    formated_date = date_time.strftime("%Y年%m月%d日 %H:%M:%S %Z")
     return formated_date
 
 def main():
