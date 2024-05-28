@@ -15,10 +15,13 @@ REQUIRED_ENVS = [
     ENV_VAR_BILI_SESSDATA
 ]
 async def get_bili_video_list():
-    u= user.User(i["mid"],credential=cedential)
     global vist
     vist = await u.get_videos(ps=3)
     return 
+
+async def get_bili_relation_info():
+    relate = await u.get_relation_info()
+    return relate
 
 async def get_bili_user_info():
     sessdata= os.environ[ENV_VAR_BILI_SESSDATA]
@@ -36,17 +39,17 @@ def update_gist(title: str, content: str) -> bool:
     gist.edit(title, {old_title: InputFileContent(content, title)})
     print(f"{title}\n{content}")
 
-def getneededinfo(need: str):
-    print(i[need])
-    return i[need] 
+def getneededinfo(info: str,need: str):
+    print(info[need])
+    return info[need] 
 
 def getvideoinfo(num: int,need: str):
     return vist["list"]["vlist"][num][need]
 
 def main():
-    username= getneededinfo("name")
-    follower= getneededinfo("follower")
-    following = getneededinfo("following")
+    username= getneededinfo(i,"name")
+    follower= getneededinfo(follows,"follower")
+    following = getneededinfo(follows,"following")
     title1 = getvideoinfo(0,"title")
     title2 = getvideoinfo(1,"title")
     title3 = getvideoinfo(2,"title")
@@ -63,6 +66,10 @@ if __name__== "__main__":
     s = time.perf_counter()
     global i
     i = sync(get_bili_user_info())
+    global u
+    u= user.User(i["mid"],credential=cedential)
+    global follows
+    follows = sync(get_bili_relation_info())
     sync(get_bili_video_list())
     # test with python gist.py test <gist> <github-token> <bili_sessdata>
     #if len(sys.argv) > 1:
