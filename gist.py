@@ -9,10 +9,12 @@ from github import Github
 ENV_VAR_GIST_ID = "GIST_ID"
 ENV_VAR_GITHUB_TOKEN = "GH_TOKEN"
 ENV_VAR_BILI_SESSDATA = "BILI_SESSDATA"
+ENV_VAR_BILI_UID = "BILI_UID"
 REQUIRED_ENVS = [
     ENV_VAR_GIST_ID,
     ENV_VAR_GITHUB_TOKEN,
-    ENV_VAR_BILI_SESSDATA
+    ENV_VAR_BILI_SESSDATA,
+    ENV_VAR_BILI_UID
 ]
 async def get_bili_video_list():
     global vist
@@ -25,7 +27,7 @@ async def get_bili_relation_info():
 
 async def get_bili_user_info():
 
-    info= await user.get_self_info(credential=cedential)
+    info= await u.get_user_info()
     return info
 
 def update_gist(title: str, content: str) -> bool:
@@ -54,12 +56,12 @@ def getvideodate(num: int):
     return formated_date
 
 def main():
+    uid = os.environ[ENV_VAR_BILI_UID]
     sessdata= os.environ[ENV_VAR_BILI_SESSDATA]
-    global cedential
-    cedential = Credential(sessdata=sessdata)
-    i = sync(get_bili_user_info())
     global u
-    u= user.User(i["mid"],credential=cedential)
+    cedential = Credential(sessdata=sessdata)
+    u= user.User(uid,credential=cedential)
+    i = sync(get_bili_user_info())
     follows = sync(get_bili_relation_info())
     sync(get_bili_video_list())
     username= getneededinfo(i,"name")
