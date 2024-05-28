@@ -67,7 +67,7 @@ def main():
     date3 = getvideodate(2)
     print("info:用户名：",username,"粉丝数：",follower,"关注数：",following)
     print(title1,date1,"\n",title2,date2,"\n",title3,date3)
-    contents = f"粉丝数: {follower} 关注数: {following} \n ▶️最近更新视频：\n {title1} \n - {date1}"
+    contents = f"粉丝数: {follower} 关注数: {following} \n ▶️最近更新视频: {title1} \n - {date1}"
     update_gist(f"📺bilibili@{username} ",contents)
 
 
