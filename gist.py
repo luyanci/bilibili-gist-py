@@ -1,4 +1,5 @@
 import os
+import json
 import sys
 from dotenv import load_dotenv
 from bilibili_api import Credential,user,sync 
@@ -43,7 +44,6 @@ def getvideoinfo(num: int,need: str):
     return vist["list"]["vlist"][num][need]
 
 def main():
-    import json
     username= getneededinfo("name")
     follower= getneededinfo("follower")
     following = getneededinfo("following")
@@ -52,6 +52,8 @@ def main():
     title3 = getvideoinfo(2,"title")
     print("info:用户名：",username,"粉丝数：",follower,"关注数：",following)
     print(title1,"\n",title2,"\n",title3)
+    contents = f"粉丝数: {follower} 关注数: {following} \n {title1} \n {title2} \n {title3}"
+    update_gist(f"bilibili@{username} ",contents)
 
 
 
@@ -63,10 +65,10 @@ if __name__== "__main__":
     i = sync(get_bili_user_info())
     sync(get_bili_video_list())
     # test with python gist.py test <gist> <github-token> <bili_sessdata>
-    if len(sys.argv) > 1:
-        os.environ[ENV_VAR_GIST_ID] = sys.argv[2]
-        os.environ[ENV_VAR_GITHUB_TOKEN] = sys.argv[3]
-        os.environ[ENV_VAR_BILI_SESSDATA] = sys.argv[4]
+    #if len(sys.argv) > 1:
+    #    os.environ[ENV_VAR_GIST_ID] = sys.argv[2]
+    #    os.environ[ENV_VAR_GITHUB_TOKEN] = sys.argv[3]
+    #    os.environ[ENV_VAR_BILI_SESSDATA] = sys.argv[4]
     main()
     elapsed = time.perf_counter() - s
     print(f"{__file__} executed in {elapsed:0.2f} seconds.")
