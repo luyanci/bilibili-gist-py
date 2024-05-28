@@ -46,16 +46,26 @@ def getneededinfo(info: str,need: str):
 def getvideoinfo(num: int,need: str):
     return vist["list"]["vlist"][num][need]
 
+def getvideodate(num: int):
+    import datetime
+    date= getvideoinfo(num,"created")
+    date_time = datetime.datetime.fromtimestamp(date)
+    formated_date = date_time.strftime("%Y年%m月%d日 %H:%M:%S")
+    return formated_date
+
 def main():
     username= getneededinfo(i,"name")
     follower= getneededinfo(follows,"follower")
     following = getneededinfo(follows,"following")
     title1 = getvideoinfo(0,"title")
+    date1 = getvideodate(0)
     title2 = getvideoinfo(1,"title")
+    date2 = getvideodate(1)
     title3 = getvideoinfo(2,"title")
+    date3 = getvideodate(2)
     print("info:用户名：",username,"粉丝数：",follower,"关注数：",following)
-    print(title1,"\n",title2,"\n",title3)
-    contents = f"粉丝数: {follower} 关注数: {following} \n ▶️最近更新视频：\n {title1} \n {title2} \n {title3}"
+    print(title1,date1,"\n",title2,date2,"\n",title3,date3)
+    contents = f"粉丝数: {follower} 关注数: {following} \n ▶️最近更新视频：\n {title1}  {date1} \n {title2}  {date2} \n {title3}  {date3}"
     update_gist(f"📺bilibili@{username} ",contents)
 
 
@@ -71,11 +81,6 @@ if __name__== "__main__":
     global follows
     follows = sync(get_bili_relation_info())
     sync(get_bili_video_list())
-    # test with python gist.py test <gist> <github-token> <bili_sessdata>
-    #if len(sys.argv) > 1:
-    #    os.environ[ENV_VAR_GIST_ID] = sys.argv[2]
-    #    os.environ[ENV_VAR_GITHUB_TOKEN] = sys.argv[3]
-    #    os.environ[ENV_VAR_BILI_SESSDATA] = sys.argv[4]
     main()
     elapsed = time.perf_counter() - s
     print(f"{__file__} executed in {elapsed:0.2f} seconds.")
