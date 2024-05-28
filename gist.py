@@ -52,7 +52,7 @@ def main():
     title3 = getvideoinfo(2,"title")
     print("info:用户名：",username,"粉丝数：",follower,"关注数：",following)
     print(title1,"\n",title2,"\n",title3)
-    contents = f"粉丝数: {follower} 关注数: {following} \n {title1} \n {title2} \n {title3}"
+    contents = f"粉丝数: {follower} 关注数: {following} \n 最近更新视频：\n {title1} \n {title2} \n {title3}"
     update_gist(f"bilibili@{username} ",contents)
 
 
