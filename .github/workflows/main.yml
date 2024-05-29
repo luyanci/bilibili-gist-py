@@ -21,4 +21,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: 181a99b82ae47d3a6fccbd126f9d93ef
           BILI_SESSDATA: ${{ secrets.BILI_SESSDATA }}
-          BILI_UID: 3493090509720121
+          BILI_UID: '3493090509720121'
