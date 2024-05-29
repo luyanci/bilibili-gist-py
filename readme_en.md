@@ -6,6 +6,8 @@
 
 📺Update a pinned gist to show your Bilibili stats and your latest videos.📺
 
+[![Update gist](https://github.com/luyanci/bilibili-gist-py/actions/workflows/main.yml/badge.svg)](https://github.com/luyanci/bilibili-gist-py/actions/workflows/main.yml)
+
 </div>
 
 ## Usage
