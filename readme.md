@@ -2,7 +2,7 @@
 
 ![1000054481](https://github.com/luyanci/bili-gist/assets/68143180/98f8a656-921c-4545-a754-86fc93173b69)
 
-# Bili Gist
+# Bilibili Gist Python
 
 📺将你的b站信息和近期投稿视频更新到你的pinned Gist📺
 
