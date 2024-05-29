@@ -8,7 +8,8 @@
 
 </div>
 
-## 帮助
+## 灵感&帮助
 [bilibili-api-python](https://github.com/nemo2011/bilibili-api)
+
 [bilibili-box](https://github.com/KeJunMao/bilibili-box)
 
