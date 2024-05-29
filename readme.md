@@ -18,7 +18,7 @@
 
 ### 部署
 
-1. fork这个仓库
+1. fork本仓库
 
 2. 编辑  `.github/workflows/main.yml` 中的**环境变量**
 
