@@ -10,15 +10,15 @@
 
 ## 使用
 ### 准备工作
-1.创建一个公开的 GitHub Gist (https://gist.github.com/)
+1. 创建一个公开的 GitHub Gist (https://gist.github.com/)
 
-1.创建一个拥有 gist 权限的 token 并复制. (https://github.com/settings/tokens/new)
+1. 创建一个拥有 gist 权限的 token 并复制. (https://github.com/settings/tokens/new)
 
-1.根据文档获取`SESSDATA`的值并复制(https://nemo2011.github.io/bilibili-api/#/get-credential)
+1. 根据文档获取`SESSDATA`的值并复制(https://nemo2011.github.io/bilibili-api/#/get-credential)
 
 ### 部署
 
-1.fork这个仓库
+1. fork这个仓库
 
 1. 编辑  `.github/workflows/main.yml` 中的**环境变量**
 
