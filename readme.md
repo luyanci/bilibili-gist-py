@@ -32,7 +32,21 @@
 
 ## 本地测试
 
+1. clone本仓库
 
+2. 输入以下命令安装依赖
+
+```
+pip install -r requirements.txt
+```
+
+3. 复制`.env.example`文件，更名为`.env`，并按照文件内容填写即可
+
+4. 输入以下命令，进行测试
+
+```
+py gist.py
+```
 
 ## 工作原理
 
