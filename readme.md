@@ -4,9 +4,11 @@
 
 # Bili Gist
 
-📺将你的b站信息和近期投稿视频更新到你的pinned Gist 
+📺将你的b站信息和近期投稿视频更新到你的pinned Gist📺
 
 </div>
+
+
 
 ## 灵感&帮助
 [bilibili-api-python](https://github.com/nemo2011/bilibili-api)
