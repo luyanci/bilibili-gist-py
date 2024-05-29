@@ -30,6 +30,10 @@
 
 5. 前往仓库的 **Actions > Update gist** 并点击 `enable workflows`
 
+## 本地测试
+
+
+
 ## 工作原理
 
  - 使用**bilibili-api-python**来获取相关信息
@@ -42,3 +46,7 @@
 [bilibili-box](https://github.com/KeJunMao/bilibili-box)
 
 [chess-com-box-py](https://github.com/sciencepal/chess-com-box-py)
+
+## 许可
+
+本仓库使用了`MIT`开源协议证书
