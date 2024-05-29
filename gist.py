@@ -52,7 +52,7 @@ def getvideodate(num: int):
     tzc = timezone('Asia/Shanghai')
     date= getvideoinfo(num,"created")
     date_time = datetime.datetime.fromtimestamp(date,tz=tzc)
-    formated_date = date_time.strftime("%Y年%m月%d日 %H:%M:%S %Z")
+    formated_date = date_time.strftime("%Y年%m月%d日 %H:%M:%S")
     return formated_date
 
 def main():
@@ -69,11 +69,15 @@ def main():
     following = getneededinfo(follows,"following")
     title1 = getvideoinfo(0,"title")
     date1 = getvideodate(0)
+    view1 = getvideoinfo(0,"play")
+    comment1 = getvideoinfo(0,"comment")
     title2 = getvideoinfo(1,"title")
     date2 = getvideodate(1)
+    view2 = getvideoinfo(1,"play")
+    comment2 = getvideoinfo(1,"comment")
     print("info:用户名：",username,"粉丝数：",follower,"关注数：",following)
-    print(title1,date1,"\n",title2,date2)
-    contents = f"粉丝数: {follower} 关注数: {following} \n ▶️最近更新视频: {title1} \n - {date1} \n {title2} \n - {date2}"
+    print(title1,date1,view1,comment1,"\n",title2,date2,view2,comment2)
+    contents = f"粉丝数: {follower} 关注数: {following} \n ▶️最近更新视频: {title1} \n - {date1} views:{view1} comments:{comment1} \n {title2} \n - {date2} views: {view2} comments: {comment2}"
     update_gist(f"📺bilibili@{username} ",contents)
 
 
