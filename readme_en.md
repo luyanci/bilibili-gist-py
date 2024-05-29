@@ -4,37 +4,37 @@
 
 # Bilibili Gist Python
 
-📺将你的b站信息和近期投稿视频更新到你的pinned Gist📺
+📺Update a pinned gist to show your Bilibili stats and your latest videos.📺
 
 </div>
 
-## 使用
-### 准备工作
-1. 创建一个公开的 GitHub Gist (https://gist.github.com/)
+## Usage
+### Prepare
+1. Create a public GitHub Gist. (https://gist.github.com/)
 
-1. 创建一个拥有 gist 权限的 token 并复制. (https://github.com/settings/tokens/new)
+1. Create a has `gist` permissions token then copy it. (https://github.com/settings/tokens/new)
 
-1. 根据文档获取`SESSDATA`的值并复制(https://nemo2011.github.io/bilibili-api/#/get-credential)
+1. Follow the documents to get`SESSDATA`'s key then copy it.(https://nemo2011.github.io/bilibili-api/#/get-credential)
 
-### 部署
+### Deploy
 
-1. fork本仓库
+1. Fork this repository.
 
-2. 编辑  `.github/workflows/main.yml` 中的**环境变量**
+2. Edit the env in file `.github/workflows/main.yml`.
 
-3. 前往仓库的 **Settings > Secrets**
+3. Go to **Settings > Secrets**.
 
-4. 点击 **New repository secret** 并添加如下仓库秘密 (repository secrets) ：
-   - **GH_TOKEN:** 刚才复制的 GitHub token
-   - **BILI_SESSDATA:** 刚才复制的B站SESSDATA值
+4. Click **New repository secret** and add the repository secrets below ：
+   - **GH_TOKEN:**  GitHub token
+   - **BILI_SESSDATA:** SESSDATA
 
-5. 前往仓库的 **Actions > Update gist** 并点击 `enable workflows`
+5. Go to **Actions > Update gist** then click `enable workflows`.
 
-## 本地测试
+## Local test
 
-1. clone本仓库
+1. Clone this repository.
 
-2. 输入以下命令安装依赖
+2. Install the requirements by the command below.
 
 ```
 pip install -r requirements.txt
@@ -42,28 +42,28 @@ pip install -r requirements.txt
 
 3. 复制`.env.example`文件，更名为`.env`，并按照文件内容填写即可
 
-4. 输入以下命令，进行测试
+4. Run the gist.py by the command below.
 
 ```
 py gist.py
 ```
 
-## 工作原理
+## How it works?
 
- - 使用**bilibili-api-python**来获取相关信息
+ - Use **bilibili-api-python**来获取相关信息
 
- - 利用**Github Actions**自动更新Gist
+ - Use**Github Actions**自动更新Gist
 
-## 灵感&帮助
+## Helps
 [bilibili-api-python](https://github.com/nemo2011/bilibili-api)
 
 [bilibili-box](https://github.com/KeJunMao/bilibili-box)
 
 [chess-com-box-py](https://github.com/sciencepal/chess-com-box-py)
 
-## 许可
+## License
 
-本仓库使用了`MIT`开源协议证书
+Used `MIT License` on this repository.
 ```
  The MIT License (MIT)
  Copyright (c) 2024 luyanci
