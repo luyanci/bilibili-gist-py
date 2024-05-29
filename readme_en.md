@@ -40,7 +40,7 @@
 pip install -r requirements.txt
 ```
 
-3. 复制`.env.example`文件，更名为`.env`，并按照文件内容填写即可
+3. Copy`.env.example`file,and rename to `.env`，then edit it.
 
 4. Run the gist.py by the command below.
 
@@ -50,9 +50,9 @@ py gist.py
 
 ## How it works?
 
- - Use **bilibili-api-python**来获取相关信息
+ - Use **bilibili-api-python**to get some details on bilibili.
 
- - Use**Github Actions**自动更新Gist
+ - Use **Github Actions**to Auto update the Gist.
 
 ## Helps
 [bilibili-api-python](https://github.com/nemo2011/bilibili-api)
