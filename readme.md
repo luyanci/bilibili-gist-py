@@ -10,8 +10,15 @@
 
 ## 使用
 ### 准备工作
+ - 创建一个公开的 GitHub Gist (https://gist.github.com/)
+
+ - 创建一个拥有 gist 权限的 token 并复制. (https://github.com/settings/tokens/new)
+
+ - 根据文档获取`SESSDATA`的值并复制(https://nemo2011.github.io/bilibili-api/#/get-credential)
 
 ### 部署
+
+ - fork这个仓库
 
 ## 灵感&帮助
 [bilibili-api-python](https://github.com/nemo2011/bilibili-api)
