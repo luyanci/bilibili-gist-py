@@ -30,6 +30,12 @@
 
 5. 前往仓库的 **Actions > Update gist** 并点击 `enable workflows`
 
+## 工作原理
+
+ - 使用**bilibili-api-python**来获取相关信息
+
+ - 利用**Github Actions**自动更新Gist
+
 ## 灵感&帮助
 [bilibili-api-python](https://github.com/nemo2011/bilibili-api)
 
