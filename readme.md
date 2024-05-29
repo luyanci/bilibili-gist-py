@@ -8,10 +8,14 @@
 
 </div>
 
+## 使用
+### 准备工作
 
+### 部署
 
 ## 灵感&帮助
 [bilibili-api-python](https://github.com/nemo2011/bilibili-api)
 
 [bilibili-box](https://github.com/KeJunMao/bilibili-box)
 
+[chess-com-box-py](https://github.com/sciencepal/chess-com-box-py)
