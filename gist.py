@@ -77,7 +77,7 @@ def main():
     comment2 = getvideoinfo(1,"comment")
     print("info:用户名：",username,"粉丝数：",follower,"关注数：",following)
     print(title1,date1,view1,comment1,"\n",title2,date2,view2,comment2)
-    contents = f"粉丝数: {follower} 关注数: {following} \n ▶️最近更新视频: {title1} \n - {date1} views:{view1} comments:{comment1} \n {title2} \n - {date2} views: {view2} comments: {comment2}"
+    contents = f"粉丝数: {follower} 关注数: {following} \n ▶️最近更新视频: {title1} \n - {date1} ▶︎:{view1} 💬:{comment1} \n {title2} \n - {date2} ▶︎:{view2} 💬:{comment2}"
     update_gist(f"📺bilibili@{username} ",contents)
 
 
