@@ -20,7 +20,15 @@
 
 1. fork这个仓库
 
-1. 编辑  `.github/workflows/main.yml` 中的**环境变量**
+2. 编辑  `.github/workflows/main.yml` 中的**环境变量**
+
+3. 前往仓库的 **Settings > Secrets**
+
+4. 点击 **New repository secret** 并添加如下仓库秘密 (repository secrets) ：
+   - **GH_TOKEN:** 刚才复制的 GitHub token
+   - **BILI_SESSDATA:** 刚才复制的B站SESSDATA值
+
+5. 前往仓库的 **Actions > Update gist** 并点击 `enable workflows`
 
 ## 灵感&帮助
 [bilibili-api-python](https://github.com/nemo2011/bilibili-api)
