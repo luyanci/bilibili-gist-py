@@ -50,9 +50,9 @@ py gist.py
 
 ## How it works?
 
- - Use **bilibili-api-python**to get some details on bilibili.
+ - Use **bilibili-api-python** to get some details on bilibili.
 
- - Use **Github Actions**to Auto update the Gist.
+ - Use **Github Actions** to Auto update the Gist.
 
 ## Helps
 [bilibili-api-python](https://github.com/nemo2011/bilibili-api)
