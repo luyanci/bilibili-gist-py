@@ -10,9 +10,10 @@
 
 [![Update gist](https://github.com/luyanci/bilibili-gist-py/actions/workflows/main.yml/badge.svg)](https://github.com/luyanci/bilibili-gist-py/actions/workflows/main.yml)
 
+</div>
+
 > 📌✨ 更多像这样的 Pinned Gist 项目请访问：https://github.com/matchai/awesome-pinned-gists
 
-</div>
 
 ## 使用
 ### 准备工作
