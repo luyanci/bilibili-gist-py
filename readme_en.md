@@ -10,6 +10,12 @@
 
 </div>
 
+---
+
+> 📌✨ For more pinned-gist projects like this one, check out: https://github.com/matchai/awesome-pinned-gists
+
+---
+
 ## Usage
 ### Prepare
 1. Create a public GitHub Gist. (https://gist.github.com/)

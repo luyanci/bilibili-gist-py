@@ -12,6 +12,12 @@
 
 </div>
 
+---
+
+> 📌✨ 更多像这样的 Pinned Gist 项目请访问：https://github.com/matchai/awesome-pinned-gists
+
+---
+
 ## 使用
 ### 准备工作
 1. 创建一个公开的 GitHub Gist (https://gist.github.com/)
