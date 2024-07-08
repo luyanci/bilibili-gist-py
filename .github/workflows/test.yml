@@ -9,6 +9,7 @@ jobs:
   update-gist:
     runs-on: ubuntu-latest
     steps:
+        - uses: actions/checkout@master
         - name: Update gist
           uses: ./
           with:
