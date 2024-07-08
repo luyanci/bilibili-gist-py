@@ -1,0 +1,36 @@
+name: bili-gist-python
+description: Update a pinned gist to show your Bilibili stats and your latest videos.
+inputs:
+  sessdata:
+    description: Your bilibili sessdata
+    required: true
+  biliuid:
+    description: Bilibili uid
+    required: true
+  gistid:
+    description: Your gistid
+    required: true
+  ghtoken:
+    description: Your gh_token with gist permission
+    required: true
+runs:
+  using: composite
+  steps:
+  - name: setup python
+    uses: actions/setup-python@v5
+    with:
+      python-version: 3.8
+      cache: 'pip'
+      cache-dependency-path: '**/requirements.txt'
+  - name: Install requirement
+    run: pip install -r $GITHUB_ACTION_PATH/requirements.txt
+    shell: bash
+  - name: Update gist
+    run: python $GITHUB_ACTION_PATH/gist.py
+    env:
+      GH_TOKEN: ${{ inputs.ghtoken }}
+      GIST_ID: ${{ inputs.gistid }}
+      BILI_SESSDATA: ${{ inputs.sessdata }}
+      BILI_UID: ${{ inputs.biliuid }}
+    shell: bash
+
