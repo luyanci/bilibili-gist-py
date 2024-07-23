@@ -28,6 +28,8 @@
 
 ### 部署
 
+#### 复刻使用
+
 1. fork本仓库
 
 2. 编辑  `.github/workflows/main.yml` 中的**环境变量**
@@ -39,6 +41,10 @@
    - **BILI_SESSDATA:** 刚才复制的B站SESSDATA值
 
 5. 前往仓库的 **Actions > Update gist** 并点击 `enable workflows`
+
+#### Action使用
+
+
 
 ## 本地测试
 
