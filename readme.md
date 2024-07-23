@@ -44,6 +44,17 @@
 
 #### Action使用
 
+复制此模板到你的workflow即可
+
+```yaml
+        - name: Update gist
+          uses: luyanci/bill-gist@master
+          with:
+            ghtoken: ${{ secrets.GH_TOKEN }}
+            gistid: 181a99b82ae47d3a6fccbd126f9d93ef
+            sessdata: ${{ secrets.BILI_SESSDATA }}
+            biliuid: '282873551'
+```
 
 
 ## 本地测试
