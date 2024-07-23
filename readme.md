@@ -48,7 +48,7 @@
 
 ```yaml
         - name: Update gist
-          uses: luyanci/bill-gist@master
+          uses: luyanci/bilibili-gist-py@master
           with:
             ghtoken: ${{ secrets.GH_TOKEN }}
             gistid: 181a99b82ae47d3a6fccbd126f9d93ef
