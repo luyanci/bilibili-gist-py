@@ -63,7 +63,7 @@
 
 2. 输入以下命令安装依赖
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
@@ -71,7 +71,7 @@ pip install -r requirements.txt
 
 4. 输入以下命令，进行测试
 
-```
+```bash
 py gist.py
 ```
 
