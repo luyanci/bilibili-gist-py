@@ -8,6 +8,8 @@
 
 [![Update gist](https://github.com/luyanci/bilibili-gist-py/actions/workflows/main.yml/badge.svg)](https://github.com/luyanci/bilibili-gist-py/actions/workflows/main.yml)
 
+[中文](readme.md)|English
+
 </div>
 
 ---
