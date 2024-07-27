@@ -26,6 +26,7 @@
 
 1. 根据文档获取`SESSDATA`的值并复制(https://nemo2011.github.io/bilibili-api/#/get-credential)
 
+1. 在B站个人空间的链接中找到 UID (https://space.bilibili.com/37728693)
 ### 部署
 
 #### 复刻使用
