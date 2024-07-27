@@ -26,7 +26,7 @@
 
 1. Follow the documents to get`SESSDATA`'s key then copy it.(https://nemo2011.github.io/bilibili-api/#/get-credential)
 
-1. Find UID in Bilibili personal space link (https://space.bilibili.com/37728693)
+1. Find UID in Bilibili personal space link (https://space.bilibili.com/282873551)
 
 ### Deploy
 
