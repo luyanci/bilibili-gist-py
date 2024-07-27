@@ -30,6 +30,8 @@
 
 ### Deploy
 
+#### By Forks
+
 1. Fork this repository.
 
 2. Edit the env in file `.github/workflows/main.yml`.
@@ -41,6 +43,20 @@
    - **BILI_SESSDATA:** SESSDATA
 
 5. Go to **Actions > Update gist** then click `enable workflows`.
+
+#### By Workflow
+
+Use this sample to your workflow.
+
+```yaml
+        - name: Update gist
+          uses: luyanci/bilibili-gist-py@master
+          with:
+            ghtoken: ${{ secrets.GH_TOKEN }}
+            gistid: 181a99b82ae47d3a6fccbd126f9d93ef
+            sessdata: ${{ secrets.BILI_SESSDATA }}
+            biliuid: '282873551'
+```
 
 ## Local test
 
