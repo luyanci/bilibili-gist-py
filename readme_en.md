@@ -46,7 +46,7 @@
 
 #### By Workflow
 
-Use this sample to your workflow.
+Use this sample to your workflow file.
 
 ```yaml
         - name: Update gist
