@@ -1,16 +1,16 @@
 name: bili-gist-python
 description: Update a pinned gist to show your Bilibili stats and your latest videos.
 inputs:
-  sessdata:
+  BILI_SESSDATA:
     description: Your bilibili sessdata
     required: true
-  biliuid:
+  BILI_UID:
     description: Bilibili uid
     required: true
-  gistid:
+  GIST_ID:
     description: Your gistid
     required: true
-  ghtoken:
+  GH_TOKEN:
     description: Your gh_token with gist permission
     required: true
 runs:
@@ -28,4 +28,3 @@ runs:
   - name: Update gist
     run: python $GITHUB_ACTION_PATH/gist.py
     shell: bash
-
