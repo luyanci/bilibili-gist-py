@@ -27,10 +27,5 @@ runs:
     shell: bash
   - name: Update gist
     run: python $GITHUB_ACTION_PATH/gist.py
-    env:
-      GH_TOKEN: ${{ inputs.ghtoken }}
-      GIST_ID: ${{ inputs.gistid }}
-      BILI_SESSDATA: ${{ inputs.sessdata }}
-      BILI_UID: ${{ inputs.biliuid }}
     shell: bash
 
