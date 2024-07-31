@@ -6,6 +6,8 @@
 
 📺Update a pinned gist to show your Bilibili stats and your latest videos.📺
 
+[中文](readme.md)|English
+
 [![Update gist](https://github.com/luyanci/bilibili-gist-py/actions/workflows/main.yml/badge.svg)](https://github.com/luyanci/bilibili-gist-py/actions/workflows/main.yml)
 
 </div>
@@ -24,7 +26,11 @@
 
 1. Follow the documents to get`SESSDATA`'s key then copy it.(https://nemo2011.github.io/bilibili-api/#/get-credential)
 
+1. Find UID in Bilibili personal space link (https://space.bilibili.com/282873551)
+
 ### Deploy
+
+#### By Forks
 
 1. Fork this repository.
 
@@ -37,6 +43,20 @@
    - **BILI_SESSDATA:** SESSDATA
 
 5. Go to **Actions > Update gist** then click `enable workflows`.
+
+#### By Workflow
+
+Use this sample to your workflow file.
+
+```yaml
+        - name: Update gist
+          uses: luyanci/bilibili-gist-py@master
+          with:
+            ghtoken: ${{ secrets.GH_TOKEN }}
+            gistid: 181a99b82ae47d3a6fccbd126f9d93ef
+            sessdata: ${{ secrets.BILI_SESSDATA }}
+            biliuid: '282873551'
+```
 
 ## Local test
 
