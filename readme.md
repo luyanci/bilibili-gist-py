@@ -26,10 +26,7 @@
 
 1. 根据文档获取`SESSDATA`的值并复制(https://nemo2011.github.io/bilibili-api/#/get-credential)
 
-1. 在B站个人空间的链接中找到 UID (https://space.bilibili.com/282873551)
 ### 部署
-
-#### 复刻使用
 
 1. fork本仓库
 
@@ -43,28 +40,13 @@
 
 5. 前往仓库的 **Actions > Update gist** 并点击 `enable workflows`
 
-#### Action使用
-
-复制此模板到你的workflow即可
-
-```yaml
-        - name: Update gist
-          uses: luyanci/bilibili-gist-py@master
-          with:
-            ghtoken: ${{ secrets.GH_TOKEN }}
-            gistid: 181a99b82ae47d3a6fccbd126f9d93ef
-            sessdata: ${{ secrets.BILI_SESSDATA }}
-            biliuid: '282873551'
-```
-
-
 ## 本地测试
 
 1. clone本仓库
 
 2. 输入以下命令安装依赖
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
@@ -72,7 +54,7 @@ pip install -r requirements.txt
 
 4. 输入以下命令，进行测试
 
-```bash
+```
 py gist.py
 ```
 
