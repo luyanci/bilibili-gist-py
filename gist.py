@@ -82,6 +82,7 @@ def main():
 
 
 if __name__== "__main__":
+    logger.add(f'./log.log',format='{time} {level} {function} - {message}')
     load_dotenv(dotenv_path="./.env")
     import time
     logger.info("Starting jobs...")
