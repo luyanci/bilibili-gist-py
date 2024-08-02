@@ -29,6 +29,7 @@ runs:
     run: pip install -r $GITHUB_ACTION_PATH/requirements.txt
     shell: bash
   - run: echo "::endgroup::"
+    shell: bash
   - name: Update gist
     run: python $GITHUB_ACTION_PATH/gist.py
     env:
