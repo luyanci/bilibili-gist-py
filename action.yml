@@ -16,6 +16,8 @@ inputs:
 runs:
   using: composite
   steps:
+  - name : Prepareing...
+    run: echo "::group::Prepareing..."
   - name: setup python
     uses: actions/setup-python@v5
     with:
@@ -25,6 +27,7 @@ runs:
   - name: Install requirement
     run: pip install -r $GITHUB_ACTION_PATH/requirements.txt
     shell: bash
+  - run: echo 
   - name: Update gist
     run: python $GITHUB_ACTION_PATH/gist.py
     env:
