@@ -35,7 +35,7 @@ def update_gist(title: str, content: str) -> bool:
     # Shouldn't necessarily work, keeping for case of single file made in hurry to get gist id.
     old_title = list(gist.files.keys())[0]
     gist.edit(title, {old_title: InputFileContent(content, title)})
-    print(f"{title}\n{content}")
+    logger.info(f"\n{title}\n{content}")
 
 def getneededinfo(info: str,need: str):
     return info[need] 
@@ -82,6 +82,7 @@ def main():
 
 
 if __name__== "__main__":
+    logger.add(f'./log.log',format='{time} {level} {function} - {message}')
     load_dotenv(dotenv_path="./.env")
     import time
     logger.info("Starting jobs...")
