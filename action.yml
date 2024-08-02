@@ -18,6 +18,7 @@ runs:
   steps:
   - name: Prepareing...
     run: echo "::group::Prepareing..."
+    shell: bash
   - name: setup python
     uses: actions/setup-python@v5
     with:
@@ -38,3 +39,4 @@ runs:
     shell: bash
   - name: output logs
     run: cat log.log >>$GITHUB_STEP_SUMMARY
+    shell: bash
