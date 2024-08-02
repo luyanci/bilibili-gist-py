@@ -54,7 +54,7 @@
             ghtoken: ${{ secrets.GH_TOKEN }}
             gistid: 181a99b82ae47d3a6fccbd126f9d93ef
             sessdata: ${{ secrets.BILI_SESSDATA }}
-            biliuid: '282873551'
+            biliuid: '282873551' #不能删除引号，否则在长uid下会报错
 ```
 
 
