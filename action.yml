@@ -16,7 +16,7 @@ inputs:
 runs:
   using: composite
   steps:
-  - name : Prepareing...
+  - name: Prepareing...
     run: echo "::group::Prepareing..."
   - name: setup python
     uses: actions/setup-python@v5
@@ -27,7 +27,7 @@ runs:
   - name: Install requirement
     run: pip install -r $GITHUB_ACTION_PATH/requirements.txt
     shell: bash
-  - run: echo 
+  - run: echo "::endgroup::"
   - name: Update gist
     run: python $GITHUB_ACTION_PATH/gist.py
     env:
@@ -36,4 +36,5 @@ runs:
       BILI_SESSDATA: ${{ inputs.sessdata }}
       BILI_UID: ${{ inputs.biliuid }}
     shell: bash
-
+  - name: output logs
+    run: cat log.log >>$GITHUB_STEP_SUMMARY
