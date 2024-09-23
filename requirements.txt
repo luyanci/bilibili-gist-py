@@ -1,4 +1,4 @@
-bilibili-api-python==16.2.0
+bilibili-api-python==16.3.0
 loguru==0.7.2
 PyGithub==2.4.0
 python-dotenv==1.0.1
