@@ -52,6 +52,7 @@ def getvideodate(num: int):
     formated_date = date_time.strftime("%Y年%m月%d日 %H:%M:%S")
     return formated_date
 
+@logger.catch
 def main():
     uid = os.environ[ENV_VAR_BILI_UID]
     sessdata= os.environ[ENV_VAR_BILI_SESSDATA]
