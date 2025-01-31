@@ -2,4 +2,4 @@ git+https://github.com/Nemo2011/bilibili-api.git@main
 loguru==0.7.3
 PyGithub==2.5.0
 python-dotenv==1.0.1
-pytz==2024.2
+pytz==2025.1
