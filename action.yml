@@ -1,6 +1,7 @@
 name: bili-gist-python
-icon: cast
-color: blue
+branding:
+  icon: "cast"
+  color: "blue"
 description: Update a pinned gist to show your Bilibili stats and your latest videos.
 inputs:
   sessdata:
