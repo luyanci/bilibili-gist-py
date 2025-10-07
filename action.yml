@@ -23,7 +23,7 @@ runs:
     run: echo "::group::Prepareing..."
     shell: bash
   - name: setup python
-    uses: actions/setup-python@v5
+    uses: actions/setup-python@v6
     with:
       python-version: 3.9
       cache: 'pip'
